@@ -1,0 +1,38 @@
+
+
+img {
+  height: 200px;
+  width: 100%;
+}
+body {
+  background: rgb(211, 211, 235);
+}
+.sede_sena {
+  margin-left: 125px;
+}
+.sena_sistema_monitoreo {
+  margin-top: 10px;
+  padding: 0 20px 0 20px;
+}
+.distitor {
+  background-color: blanchedalmond;
+}
+.imagen_logo_sena {
+  margin: 20px;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+}
+.contenedor_logo {
+  position: absolute;
+  top: 0;
+  left: 40.6rem;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
