@@ -1,12 +1,17 @@
-FROM alpine:3.10
+FROM python:3.10-alpine
 
-RUN apk add --no-cache python3-dev \
-    && pip3 install --upgrade pip   
+WORKDIR /code
 
-WORKDIR /app
+ENV FLASK_APP src/app.py
 
-COPY . /app
+ENV FLASK_RUN_HOST 0.0.0.0
 
-RUN pip3 --no-cache-dir install -r requirements.txt
+#RUN apk add --no-cache gcc musl-dev linux-headers
 
-CMD ["python3", "src/app.py"]
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["flask", "run"]

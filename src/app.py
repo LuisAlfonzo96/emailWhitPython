@@ -21,8 +21,8 @@ def sendEmailR():
     email = request.json['email']
     message = request.json['message']
     subject = request.json['subject']
-    sendEmail.emailCheck(email,subject)
+    sendEmail.emailWhitPost(email,subject, message)
     return "email"
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='localhost', port=4000)
